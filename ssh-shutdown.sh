@@ -14,7 +14,7 @@ if [ -z $3 ]
 then
   ssh $1@$2 'shutdown now'
 else
-  if [[ "$3" -eq "W" ]]
+  if [ "$3" = "W" ]
   then
   ssh $1@$2 'shutdown -s -t 60 -c "Shutdown in 1 Minute from SSH command."'
   fi
